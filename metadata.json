@@ -1,0 +1,6 @@
+{
+  "name": "Aura Intelligence",
+  "description": "A high-performance AI partner and mental clarity workplace styled with luxurious minimalist design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
