@@ -1,0 +1,6 @@
+{
+  "name": "Adaptive AI",
+  "description": "AI-powered productivity companion managing to-dos, analytics, intelligent coaching, and personalized settings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
