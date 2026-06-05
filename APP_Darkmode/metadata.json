@@ -1,0 +1,6 @@
+{
+  "name": "Aura Intelligence",
+  "description": "Aura Intelligence is a premium wellness & productivity space, balancing high-performance AI guidance with empathetic, calming mental clarity tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
