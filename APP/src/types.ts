@@ -1,56 +1,31 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
-export type TaskStatus = 'active' | 'upcoming' | 'completed' | 'pending';
-export type TaskPriority = 'high' | 'medium' | 'low';
-
-export interface TaskItem {
+export interface Todo {
   id: string;
   title: string;
-  description: string;
-  status: TaskStatus;
-  progress: number; // 0 to 100
-  durationMinutes: number;
-  priority: TaskPriority;
-  category?: string;
-  completedAt?: string;
+  time: string; // e.g. "14:00-16:30" or just "14:00"
+  category: string; // e.g. "WORK", "MEETING", "ADMIN", "개인", "관리"
+  completed: boolean;
+  failed?: boolean;
+  aiMemo?: string; // AI recommendations
 }
 
-export interface UserProfile {
-  name: string;
-  email: string;
-  avatarUrl: string;
-}
-
-export type AIPersona = 'friendly' | 'logical' | 'assertive';
-export type AIFrequency = 'minimal' | 'moderate' | 'proactive';
-
-export interface AIPartnerConfig {
-  persona: AIPersona;
-  expertiseAreas: string[];
-  communicationFrequency: AIFrequency;
-  customInstructions: string;
-}
-
-export interface CoachMessage {
+export interface ChatMessage {
   id: string;
-  sender: 'user' | 'ai';
-  text: string;
-  timestamp: string;
+  role: "user" | "model";
+  content: string;
+  time: string;
 }
 
-export interface OnboardingPreferences {
-  categories: string[];
-  isOnboarded: boolean;
-}
-
-export interface AppState {
-  profile: UserProfile;
-  aiPartner: AIPartnerConfig;
-  tasks: TaskItem[];
-  chatHistory: CoachMessage[];
-  onboarding: OnboardingPreferences;
-  theme: 'light' | 'dark';
+export interface Post {
+  id: string;
+  authorName: string;
+  authorRole: string;
+  authorImage: string;
+  content: string;
+  timeString: string; // e.g. "2시간 전"
+  likes: number;
+  comments: number;
+  hasLiked?: boolean;
+  imgUrl?: string;
+  sharedTodos?: { id: string; text: string; checked: boolean }[];
+  sharedRoutine?: { title: string; text: string };
 }

@@ -1,6 +1,6 @@
 {
-  "name": "Aura Intelligence",
-  "description": "A high-performance AI partner and mental clarity workplace styled with luxurious minimalist design.",
+  "name": "Adaptive AI",
+  "description": "An AI-powered adaptive workspace emphasizing productivity rhythm, goal-clarification, and personal routines.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
