@@ -1,0 +1,6 @@
+{
+  "name": "Adaptive AI",
+  "description": "AI-powered routine builder and task assistant that auto-breaks long-term challenges into easy, 15-minute milestones to guide you to completion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

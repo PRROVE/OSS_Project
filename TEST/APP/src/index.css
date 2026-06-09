@@ -1,0 +1,100 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard", "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-display: "Pretendard", sans-serif;
+  --font-mono: "Inter", "Courier New", monospace;
+
+  /* Olive + Terracotta palette — WEB 동일 */
+  --color-olive:     #5a6e38;
+  --color-olive-hv:  #4a5c2e;
+  --color-olive-bg:  #ecf0e4;
+  --color-olive-bd:  #c8d4a8;
+  --color-terra:     #c4674a;
+  --color-terra-bg:  #f8ede8;
+
+  --color-bg:        #f7f6f2;
+  --color-sidebar:   #edecea;
+  --color-card:      #ffffff;
+  --color-border:    #e0ddd8;
+
+  --color-text-1:    #1c1c14;
+  --color-text-2:    #6b6b58;
+  --color-text-3:    #9a9a86;
+
+  --animate-fadeIn:    fade-in   0.25s cubic-bezier(0.16,1,0.3,1) forwards;
+  --animate-pop:       pop       0.18s cubic-bezier(0.16,1,0.3,1) forwards;
+  --animate-fade-in:   fade-in   0.25s cubic-bezier(0.16,1,0.3,1) forwards;
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pop {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+}
+
+@layer utilities {
+  .card {
+    background: #ffffff;
+    border: 1px solid #e0ddd8;
+    box-shadow: 0 1px 2px rgba(26,26,20,0.05);
+    border-radius: 12px;
+  }
+  .shadow-level-1 {
+    box-shadow: 0 1px 3px rgba(26,26,20,0.07), 0 0 0 1px rgba(26,26,20,0.04);
+  }
+  .shadow-level-2 {
+    box-shadow: 0 4px 16px rgba(26,26,20,0.10), 0 1px 4px rgba(26,26,20,0.06);
+  }
+}
+
+*, *::before, *::after {
+  border-color: #e0ddd8;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f7f6f2;
+  color: #1c1c14;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in  { animation: fadeIn  0.25s cubic-bezier(0.16,1,0.3,1) forwards; }
+.animate-scale-up { animation: scaleUp 0.22s cubic-bezier(0.16,1,0.3,1) forwards; }
+.anim-slide-down  { animation: slideDown 0.22s ease-out forwards; }
+
+/* Scrollbar — WebKit */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: transparent; border-radius: 4px; transition: background-color 0.2s; }
+*:hover::-webkit-scrollbar-thumb { background: #d4d1ca; }
+::-webkit-scrollbar-thumb:hover  { background: #9a9a86; }
+
+/* Firefox */
+* { scrollbar-width: thin; scrollbar-color: transparent transparent; }
+*:hover { scrollbar-color: #d4d1ca transparent; }
