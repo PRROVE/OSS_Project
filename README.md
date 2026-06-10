@@ -118,20 +118,6 @@ npm run dev
 
 ---
 
-## API (APP)
-
-`APP/server.ts`가 제공하는 엔드포인트입니다.
-
-| Method | Endpoint | 설명 |
-| --- | --- | --- |
-| `GET` | `/api/health` | 서버 상태 확인 |
-| `POST` | `/api/breakdown` | 큰 목표를 15~30분 단위 작은 작업으로 분해 |
-| `POST` | `/api/chat` | AI 코치와의 대화 |
-| `POST` | `/api/coach-suggestion` | 미완료 작업 중 최우선 "첫 도미노" 작업 추천 |
-
-> API 키가 없거나 호출에 실패해도 정적 폴백(fallback) 데이터로 동작합니다.
-
----
 
 ## 일정
 
