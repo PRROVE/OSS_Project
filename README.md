@@ -104,7 +104,7 @@ npm run dev
 
 → http://localhost:3000
 
-<img src="APP.gif" width="300"/>
+<img src="video/APP.gif" width="300"/>
 
 ### WEB
 
@@ -116,7 +116,7 @@ npm run dev
 
 → http://localhost:3000
 
-<img src="WEB.gif" width="700"/>
+<img src="video/WEB.gif" width="700"/>
 
 ---
 
